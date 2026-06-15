@@ -1,30 +1,60 @@
 # Miniguia de Estudos - Pandas para Análise de Dados com NotebookLM
 
-## Objetivo
+## 📖 Contexto
 
 Este projeto foi desenvolvido como parte do desafio da DIO utilizando o NotebookLM como ferramenta de aprendizagem ativa.
 
-O tema escolhido foi:
-
-**Python para Análise de Dados com Pandas**
-
-O objetivo foi compreender os principais conceitos da biblioteca Pandas, suas aplicações na manipulação de dados e identificar boas práticas para utilização em projetos de análise de dados.
+O tema escolhido foi **Python para Análise de Dados com Pandas**, uma das bibliotecas mais utilizadas para manipulação, limpeza e análise de dados.
 
 ---
 
-# Curadoria de Fontes
+# 🎯 Objetivos
+
+- Compreender os conceitos fundamentais da análise de dados.
+- Estudar os principais recursos da biblioteca Pandas.
+- Aprender técnicas de limpeza e tratamento de dados.
+- Conhecer boas práticas na utilização de DataFrames.
+- Explorar o uso da Inteligência Artificial como apoio ao aprendizado.
+
+---
+
+# 📚 Curadoria de Fontes
 
 As seguintes fontes foram utilizadas no NotebookLM:
 
 1. Learn Pandas | Kaggle
 2. Pandas Tutorial | W3Schools
 3. Documentação Oficial do Pandas
-4. Guia Oficial Pandas User Guide
-5. Documentação Oficial Matplotlib
+4. Pandas User Guide
+5. Documentação Oficial do Matplotlib
 
 ---
 
-# Engenharia de Prompts
+# 🖼️ Evidências do NotebookLM
+
+## Fontes Utilizadas
+
+![Fontes](assets/fontes-notebooklm.png)
+
+## Recursos do Pandas
+
+![Prompt Pandas](assets/prompt-pandas.png)
+
+## Erros Comuns em DataFrames
+
+![Erros DataFrame](assets/erros-dataframe.png)
+
+## Prompt Genérico
+
+![Prompt Genérico](assets/prompt-generico.png)
+
+## Prompt Refinado
+
+![Prompt Refinado](assets/prompt-refinado.png)
+
+---
+
+# 🧠 Engenharia de Prompts
 
 ## Prompt 1
 
@@ -32,14 +62,13 @@ As seguintes fontes foram utilizadas no NotebookLM:
 
 > Quais são os principais recursos da biblioteca Pandas para manipulação de dados?
 
-### Principais Aprendizados
+### Resultado
 
-- Leitura de arquivos CSV, JSON, Excel e SQL
+- Leitura de dados CSV, JSON, Excel e SQL
 - Limpeza de dados
 - Filtragem e indexação
-- Transformação de dados
-- Agrupamentos e agregações
-- Análises estatísticas
+- Agrupamento e agregação
+- Estatísticas descritivas
 
 ---
 
@@ -49,21 +78,21 @@ As seguintes fontes foram utilizadas no NotebookLM:
 
 > Quais erros iniciantes costumam cometer ao trabalhar com DataFrames?
 
-### Principais Aprendizados
+### Resultado
 
 - Não tratar valores ausentes
-- Utilizar indexação incorretamente
-- Ignorar tipos de dados
-- Problemas com Chained Assignment
-- Alterações indevidas em DataFrames
+- Problemas com indexação
+- Tipos de dados incorretos
+- Chained Assignment
+- Alterações acidentais nos dados
 
 ---
 
-# Cicatriz Encontrada
+# ⚠️ Cicatriz Encontrada
 
 Durante os testes foi possível perceber que prompts muito genéricos produziam respostas superficiais.
 
-## Prompt Inicial
+### Prompt Inicial
 
 > Explique Pandas.
 
@@ -71,37 +100,35 @@ Durante os testes foi possível perceber que prompts muito genéricos produziam 
 
 A resposta apresentou conceitos corretos, porém sem foco em estudantes iniciantes.
 
----
+### Solução
 
-## Prompt Refinado
+Refinei o prompt especificando o público-alvo e solicitando exemplos práticos.
+
+### Prompt Refinado
 
 > Explique Pandas para um estudante iniciante de Análise e Desenvolvimento de Sistemas, utilizando exemplos simples em Python.
 
 ### Resultado
 
-A resposta ficou mais contextualizada, prática e fácil de compreender.
-
-Essa experiência demonstrou a importância da Engenharia de Prompts para obtenção de respostas mais úteis e direcionadas.
+A resposta ficou mais clara, prática e contextualizada, demonstrando a importância da Engenharia de Prompts.
 
 ---
 
-# Miniguia de Estudos
+# 📖 Miniguia de Estudos
 
 ## O que é Pandas?
 
-Pandas é uma biblioteca Python voltada para manipulação, tratamento e análise de dados.
+Pandas é uma biblioteca Python voltada para manipulação e análise de dados.
 
-Ela permite trabalhar com grandes volumes de informações utilizando estruturas eficientes.
+Ela oferece estruturas eficientes para organizar, limpar, transformar e analisar informações.
 
 ---
 
-## Estruturas Principais
+## Principais Estruturas
 
 ### Series
 
-Estrutura unidimensional semelhante a uma coluna de dados.
-
-Exemplo:
+Estrutura unidimensional utilizada para armazenar dados.
 
 ```python
 import pandas as pd
@@ -112,7 +139,7 @@ print(idades)
 
 ### DataFrame
 
-Estrutura bidimensional semelhante a uma planilha Excel.
+Estrutura bidimensional semelhante a uma planilha.
 
 ```python
 import pandas as pd
@@ -132,10 +159,10 @@ print(df)
 
 Principais técnicas:
 
-- Remover valores nulos
-- Substituir valores ausentes
-- Corrigir tipos de dados
-- Remover duplicidades
+- Remoção de valores nulos
+- Tratamento de duplicidades
+- Conversão de tipos de dados
+- Padronização de informações
 
 Exemplo:
 
@@ -147,9 +174,7 @@ df.dropna()
 
 ## Visualização de Dados
 
-O Matplotlib pode ser utilizado juntamente com o Pandas para gerar gráficos.
-
-Exemplo:
+O Matplotlib pode ser utilizado junto ao Pandas para gerar gráficos.
 
 ```python
 df["Idade"].plot(kind="bar")
@@ -157,46 +182,50 @@ df["Idade"].plot(kind="bar")
 
 ---
 
-# Glossário
+# 📘 Glossário
 
 | Conceito | Descrição |
 |-----------|------------|
 | Pandas | Biblioteca para análise de dados |
 | Series | Estrutura unidimensional |
 | DataFrame | Estrutura tabular |
-| CSV | Formato de arquivo para dados |
+| CSV | Arquivo de dados separado por vírgulas |
 | Data Cleaning | Processo de limpeza dos dados |
 | Indexação | Seleção de linhas e colunas |
 | Matplotlib | Biblioteca para visualização de dados |
 
 ---
 
-# Prompts Reutilizáveis
+# 🔄 Prompts Reutilizáveis
 
 ### Aprendizado
 
-> Explique [tema] para um estudante iniciante utilizando exemplos simples.
+> Explique [tema] para um estudante iniciante utilizando exemplos práticos.
 
 ### Comparação
 
-> Compare [conceito A] e [conceito B] mostrando vantagens e desvantagens.
-
-### Resumo
-
-> Resuma os principais conceitos de [tema] em tópicos.
+> Compare [conceito A] e [conceito B], destacando vantagens e desvantagens.
 
 ### Exercícios
 
-> Crie 5 exercícios práticos sobre [tema] com respostas comentadas.
+> Crie exercícios práticos sobre [tema] com respostas comentadas.
 
 ### Revisão
 
-> Gere um guia rápido de revisão sobre [tema].
+> Gere um resumo dos principais conceitos sobre [tema].
 
 ---
 
-# Conclusão
+# ✅ Conclusão
 
-O NotebookLM demonstrou ser uma ferramenta eficiente para organização do conhecimento, permitindo explorar conteúdos de forma estruturada através de fontes confiáveis e prompts bem elaborados.
+O NotebookLM demonstrou ser uma ferramenta eficiente para organização do conhecimento e apoio aos estudos.
 
-O estudo reforçou conceitos fundamentais da biblioteca Pandas e destacou a importância da engenharia de prompts para potencializar o aprendizado com Inteligência Artificial.
+Através da análise das fontes selecionadas e da engenharia de prompts, foi possível aprofundar o conhecimento sobre a biblioteca Pandas e compreender a importância de formular perguntas bem estruturadas para obter respostas mais relevantes da Inteligência Artificial.
+
+---
+
+## 👨‍💻 Autor
+
+**Murilo Santana**
+
+Estudante de Análise e Desenvolvimento de Sistemas | Entusiasta de Dados e Tecnologia
